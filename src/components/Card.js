@@ -1,4 +1,6 @@
-const Card = () => {
+const Card = (props) => {
+
+
   return (
     <div className="card">
       <div className="favorite">
@@ -8,16 +10,16 @@ const Card = () => {
         className="imgsneak"
         width={133}
         height={112}
-        src="/img/sneakers/Sn1.jpg"
+        src={props.image}
         alt=""
       />
-      <h5>Мужские Кроссовки Nike Blazer Mid Suede</h5>
+      <h5>{props.title}</h5>
       <div className="cardBottom">
         <div className="d-flex flex-column">
-          <span>Price:</span>
-          <b>12 999 ue</b>
+          <span>ЦЕНА</span>
+          <b>{props.prise}</b>
         </div>
-        <button className="btn-plus">
+        <button className="btn-plus" >
           <img src="/img/icon/btn-plus.svg" alt="Plus" />
         </button>
       </div>

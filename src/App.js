@@ -1,6 +1,7 @@
 import Card from "./components/Card";
 import Header from "./components/Header";
 import Drawer from "./components/Drawer";
+import Data from "./data";
 
 function App() {
   return (
@@ -16,10 +17,9 @@ function App() {
           </div>
         </div>
         <div className="Sneakers d-flex justify-between">
-          <Card />
-          <Card />
-          <Card />
-          <Card />
+          {Data.map((obj) => (
+            <Card title={obj.name} prise={obj.price} image={obj.image} />
+          ))}
         </div>
       </div>
     </div>

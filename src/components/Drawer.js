@@ -1,35 +1,39 @@
-const Drawer = () => {
+const Drawer = ({ onClickBack, items = [] }) => {
   return (
     <div className="overlay">
       <div className="drawer">
         <h2 className=" d-flex justify-between mb-40 ">
           Корзина
           <img
+            onClick={onClickBack}
             className="btn-remove"
             src="/img/icon/btn-remove.svg"
             alt="Remove"
           />
         </h2>
         <div className="cartItems">
-          <div className="cartItem d-flex align-center mb-20">
-            <img
-              className="mr-20"
-              width={70}
-              height={70}
-              src="/img/sneakers/Sn1.jpg"
-              alt="Sn1"
-            />
-            <div className="mr-10">
-              <p className="mb-5">Мужские Кроссовки Nike Blazer Mid Suede</p>
-              <b>12 999 eu</b>
+          {items.map((obj) => (
+            <div className="cartItem d-flex align-center mb-20">
+              <img
+                className="mr-20"
+                width={70}
+                height={70}
+                src= {obj.image}
+                alt="1"
+              />
+              <div className="mr-10">
+                <p className="mb-5">{obj.title}</p>
+                <b>{obj.prise}</b>
+              </div>
+              <img
+                className="btn-remove"
+                src="/img/icon/btn-remove.svg"
+                alt="Remove"
+              />
             </div>
-            <img
-              className="btn-remove"
-              src="/img/icon/btn-remove.svg"
-              alt="Remove"
-            />
-          </div>
+          ))}
         </div>
+
         <div className="cartTotalBlock">
           <ul>
             <li className="d-flex">

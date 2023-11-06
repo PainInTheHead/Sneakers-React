@@ -16,6 +16,11 @@ body {
   margin: 50px auto;
 }
 
+.Sneakers {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 header {
   border-bottom: 1px solid #f4f4f4;
   padding: 40px;
@@ -39,6 +44,7 @@ header {
   .card {
     margin-top: 40px;
     max-width: 220px;
+    margin-bottom: 30px;
 
     border: 1px solid #f8f8f8;
     padding: 20px;
@@ -199,6 +205,4 @@ header {
     background: darken($color: #9dd558, $amount: 10%);
   }
 }
-.overlay {
-  display: none;
-}
+
